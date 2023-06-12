@@ -1,0 +1,36 @@
+﻿@using MercaMetaApp.Data.DTO
+@model List<EmpresaViewDto>
+
+
+
+<div class="row justify-content-evenly gy-5">
+    @foreach(var empresa in Model)
+    {
+
+            <div class="col-md-5 col-lg-5">
+                <img src="@empresa.UrlImagen" class="card-img-top" alt="Poster">
+                <div class="card-body">
+                    
+                    <h5 class="card-title">@Html.DisplayFor((m) => empresa.Nombre)</h5>
+                    <div class="row">
+                        <p class="card-text col-6">Nit: @Html.DisplayFor((m) => empresa.Nit)</p>
+                        <p class="card-text col-6">Teléfono: @Html.DisplayFor((m) => empresa.Telefono)</p>
+                    </div>
+
+                    <div class="row">
+                        <p class="card-text">Dirección: @Html.DisplayFor((m) => empresa.Direccion)</p>
+                        <p class="card-text">Representante: @empresa.NombreRepresentante @empresa.ApellidoRepresentante</p>
+                    </div>
+
+                    <hr/>
+
+                <a asp-controller="Empresa" asp-action="MostrarProductosEmpresa" asp-route-idEmpresa="@empresa.Nit" class="btn btn-info">Ver Productos</a>
+
+                </div>
+             </div>
+  
+    }
+</div>
+    
+
+

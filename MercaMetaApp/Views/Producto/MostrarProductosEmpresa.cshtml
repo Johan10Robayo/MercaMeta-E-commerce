@@ -1,0 +1,46 @@
+﻿@using MercaMetaApp.Data.DTO
+@model List<ProductoDto>
+
+<div class="container mb-5">
+    <a class="btn btn-primary mb-3" asp-controller="Producto" asp-action="InsertarProducto">Crear Producto</a>
+
+</div>
+
+@if (Model != null)
+{
+    <div class="row justify-content-evenly gy-5">
+        @foreach (var producto in Model)
+        {
+
+            <div class="col-md-5 col-lg-5">
+                <img src="@producto.UrlImagen" class="card-img-top" alt="Poster">
+                <div class="card-body">
+
+                    <h5 class="card-title">@producto.Nombre</h5>
+                    <p class="card-text col-6">Código: @producto.Codigo</p>
+                    <p class="card-text col-6 text-lg-center">Descripción: @producto.Descripcion</p>
+                   
+                    <p class="card-text col-6">Precio: @producto.Precio</p>
+
+                    <div class="row">
+                        <p class="card-text col-6">Unidad de medida: @producto.UnidadMedida</p>
+                        <p class="card-text col-6">Cantidad: @producto.Cantidad</p>
+
+                    </div>
+
+
+                    <a asp-controller="Producto" asp-action="EditarProducto" asp-route-idProducto="@producto.Codigo" class="btn btn-info">Editar</a>
+                    <a asp-controller="Producto" asp-action="EliminarProducto" asp-route-idProducto="@producto.Codigo" class="btn btn-danger">Eliminar</a>
+
+                </div>
+            </div>
+
+        }
+    </div>
+
+
+
+}
+
+
+

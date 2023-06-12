@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MercaMetaApp", "MercaMetaApp\MercaMetaApp.csproj", "{10FBCD9E-7709-41A6-ABB0-944049460F0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10FBCD9E-7709-41A6-ABB0-944049460F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10FBCD9E-7709-41A6-ABB0-944049460F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10FBCD9E-7709-41A6-ABB0-944049460F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10FBCD9E-7709-41A6-ABB0-944049460F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9707D028-DA79-4CA5-B269-510F47B46267}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,36 @@
+﻿@model Usuario
+
+<div class="row mt-5">
+
+    <div class="col-sm-4 offset-sm-4">
+
+        <form asp-controller="Site" asp-action="Login" method="post">
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">Email</label>
+                <input type="email" class="form-control" asp-for="Email">
+
+            </div>
+            <div class="mb-3">
+                <label asp-for="Paswd" class="form-label">Contraseña</label>
+                <input class="form-control" asp-for="Paswd">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+        </form>
+
+        <br />
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger">
+                 @TempData["Error"]
+            </div>
+        }
+
+    </div>
+
+</div>
+
+    
+
+

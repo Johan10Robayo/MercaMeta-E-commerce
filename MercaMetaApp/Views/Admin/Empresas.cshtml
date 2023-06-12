@@ -1,0 +1,50 @@
+﻿@using MercaMetaApp.Data.DTO
+@model List<EmpresaAdminDto>
+
+<div class="container mb-5">
+    <a class="btn btn-primary mb-3" asp-controller="Admin" asp-action="CrearEmpresa">Crear empresa</a>
+
+</div>
+
+
+
+<div class="row justify-content-evenly gy-5">
+    @foreach (var empresa in Model)
+    {
+
+        <div class="col-md-5 col-lg-5">
+            <img src="@empresa.UrlImagen" class="card-img-top" alt="Poster">
+            <div class="card-body">
+
+                <h5 class="card-title">@Html.DisplayFor((m) => empresa.Nombre)</h5>
+                <div class="row">
+                    <p class="card-text col-6">Nit: @Html.DisplayFor((m) => empresa.Nit)</p>
+                    <p class="card-text col-6">Teléfono: @Html.DisplayFor((m) => empresa.Telefono)</p>
+                </div>
+
+                <div class="row">
+                    <p class="card-text">Dirección: @Html.DisplayFor((m) => empresa.Direccion)</p>
+                    
+                </div>
+
+                <hr />
+                <h6>Representante</h6>
+                <div class="row">
+                    <p class="card-text col-6">Identificación: @Html.DisplayFor((m) => empresa.Representante.Id)</p>
+                    <p class="card-text col-6">Nombre: @Html.DisplayFor((m) => empresa.Representante.Nombre)</p>
+                </div>
+
+                <div class="row">
+                    <p class="card-text col-6">Apellido: @Html.DisplayFor((m) => empresa.Representante.Apellido)</p>
+                    <p class="card-text col-6">Telefono: @Html.DisplayFor((m) => empresa.Representante.Telefono)</p>
+                </div>
+                <p class="card-text">Dirección: @Html.DisplayFor((m) => empresa.Representante.Direccion)</p>
+
+                <a asp-controller="Admin" asp-action="EditarEmpresa" asp-route-idEmpresa="@empresa.Nit" class="btn btn-info">Editar</a>
+                <a asp-controller="Admin" asp-action="EliminarEmpresa" asp-route-idEmpresa="@empresa.Nit" class="btn btn-danger">Eliminar</a>
+
+            </div>
+        </div>
+
+    }
+</div>

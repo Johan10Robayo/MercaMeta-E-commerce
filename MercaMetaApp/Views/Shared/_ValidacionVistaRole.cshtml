@@ -1,0 +1,63 @@
+﻿<ul class="navbar-nav flex-grow-1">
+    @if (User.Identity.IsAuthenticated)
+    {
+        @if (User.IsInRole("Admin"))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Empresas">Empresas Admin</a>
+            </li>
+
+        }
+
+        @if (User.IsInRole("Cliente"))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Empresa" asp-action="Index">Empresas</a>
+            </li>
+
+
+        }
+
+        @if (User.IsInRole("Empresa"))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-controller="Producto" asp-action="MostrarProductosEmpresa">Mis productos</a>
+            </li>
+
+
+        }
+
+        <ul class="navbar-nav" >
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                    <span id="user">@User.Identity.Name</span>
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Perfil</a>
+                    <a class="dropdown-item" href="#">Cambiar contraseña</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" asp-controller="Site" asp-action="CerrarSesion">Cerrar sesión</a>
+                </div>
+            </li>
+        </ul>
+
+    }else{
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Site" asp-action="Login">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Site" asp-action="Register">Registrarse</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </li>
+
+
+    }
+
+</ul>

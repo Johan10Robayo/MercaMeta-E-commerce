@@ -1,0 +1,45 @@
+﻿@using MercaMetaApp.Data.DTO
+@model List<ProductoClienteDto>
+
+
+@if (Model != null)
+{
+    <div class="row justify-content-evenly gy-5">
+        @foreach (var producto in Model)
+        {
+
+            <div class="col-md-5 col-lg-5">
+                <img src="@producto.UrlImagen" class="card-img-top" alt="Poster">
+                <div class="card-body">
+
+                    <h5 class="card-title">@producto.Nombre</h5>
+                    <p class="card-text col-6">Código: @producto.Codigo</p>
+                    <p class="card-text col-6 text-lg-center">Descripción: @producto.Descripcion</p>
+
+                    <p class="card-text col-6">Precio: @producto.Precio</p>
+
+                    <div class="row">
+                        <p class="card-text col-6">Unidad de medida: @producto.UnidadMedida</p>
+                        <p class="card-text col-6">Cantidad: @producto.Cantidad</p>
+
+                    </div>
+                    <hr/>
+                    <h6>
+                        @{
+                            string url = "https://wa.me/57" + producto.TelefonoEmpresa;
+                        }
+                        Contáctanos <a href="@url" class="m-lg-5" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    
+                    </h6>
+
+
+
+                </div>
+            </div>
+
+        }
+    </div>
+
+
+
+}
