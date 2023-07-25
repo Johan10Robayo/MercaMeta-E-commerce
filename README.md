@@ -17,6 +17,7 @@ MercaMeta es una aplicación web monolítica que permite la administración de l
 * Base de datos: Mysql 8.0
 * ASP.NET Identity (esquema de autenticación por cookies)
 * BCrypt.Net-Next 4.03 (encriptación segura de contraseñas)
+* Mysql.Data 8.0.33
 
 ## Patrones de diseño
 * Modelo Vista Controlado (MVC)
