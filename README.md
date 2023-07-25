@@ -1,6 +1,6 @@
 ![MercaMeta](https://raw.githubusercontent.com/Johan10Robayo/MercaMeta-E-commerce/master/MercaMetaApp/wwwroot/img/LogoMercaMeta.png)
 
-###Inicio de la aplicación
+### Inicio de la aplicación
 ![ezgif com-video-to-gif](https://github.com/Johan10Robayo/MercaMeta-E-commerce/assets/88938487/e6b6704d-7710-4d7a-8c7c-5bac6ee73a0c)
 
 
